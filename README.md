@@ -11,15 +11,16 @@ This application aims to **minimize food waste** in modern grocery stores using 
 ## 📈 The Problem
 
 > In Switzerland alone, **260 kg of food is thrown away every second**.  https://uglyfruits.ch/en/food-waste-facts
+
 Picture this: every 4 seconds, that’s the mass equivalent of a **Fiat New 500** going to waste.
 
-This is not just a local issue. Switzerland is not even a "blip" in the radar of big countries. It’s a global symptom of inefficient stock management, rigid pricing strategies, and fluctuating consumer demand. In 2026, no more.
+This is not just a local issue. Switzerland is not even a **"blip"** on the radar of big countries. It’s a global symptom of inefficient stock management, rigid pricing strategies, and fluctuating consumer demand. In 2026, no more.
 
 ### Key Challenges for Grocery Retailers
 
-- **Forecasting inaccuracies** — due to weather dependencies, trends and events.
-- **High perishability** — especially for bakery, dairy, and meat products.
-- **Rigid pricing models** — discounts are often too late or static.
+- **Forecasting inaccuracies** — due to weather dependencies, trends and specific events.
+- **High perishability** — especially for bakery, fruit, dairy, and meat products.
+- **Rigid pricing models** — discounts are often applied too late or are static.
 - **Operational complexity** — staff rarely optimize continuously, leading to food waste.
 
 ### Consumer and Business Perspectives
