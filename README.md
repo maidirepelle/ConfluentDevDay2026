@@ -10,8 +10,8 @@ This application aims to **minimize food waste** in modern grocery stores using 
 ---
 ## 📈 The Problem
 
-> In Switzerland alone, **260 kg of food is thrown away every second**.  
-> Picture this: every 4 seconds, that’s the mass equivalent of a **Fiat New 500** going to waste.
+> In Switzerland alone, **260 kg of food is thrown away every second**.  https://uglyfruits.ch/en/food-waste-facts
+Picture this: every 4 seconds, that’s the mass equivalent of a **Fiat New 500** going to waste.
 
 This is not just a local issue. Switzerland is not even a "blip" in the radar of big countries. It’s a global symptom of inefficient stock management, rigid pricing strategies, and fluctuating consumer demand. In 2026, no more.
 
@@ -31,13 +31,14 @@ This is not just a local issue. Switzerland is not even a "blip" in the radar of
 
 ## 🛠️ Technical Challenges
 
-Integrating **heterogeneous data sources** is never easy. Traditional batch-processing systems fail to respond quickly enough, making it impossible to react in real time.
+Integrating **heterogeneous data sources** is never easy, expecially for grocery stores.
+Traditional batch-processing systems fail to respond quickly enough, making it impossible to react in real time.
 
 This project leverages **Confluent's out-of-the-box components** and a **shift-left architecture** to enable:
 
 - **Real-time decision-making**  
-- **AI-driven analytics** for optimal prQicing and waste reduction  
-- **Event streaming pipelines** that connect physical operations with intelligent pricing logic  
+- **AI-driven analytics** for optimal pricing and waste reduction  
+- **Event streaming pipelines** that connect physical operations with intelligent pricing logic and notification layers
 
 ---
 
@@ -50,7 +51,9 @@ By combining **Confluent’s streaming capabilities** with **AI-powered insights
 ## 🧨 High Level Architecture
 
 <img width="2180" height="1467" alt="image" src="https://github.com/user-attachments/assets/89338acd-0a0e-473c-b8f3-16fc6226a084" />
-Components are divided in main categories
+
+Components are divided in main categories:
+
 - Main Data producers
 - ML Models - AI
 - Data Pipeline (Confluent Kafka -including topics and schema Registry- + Flink processing layer)
@@ -63,11 +66,12 @@ Components are divided in main categories
 
 Time wise, I had the chance to focus only on one specific scenario, but in the high level architecture more and more are feasible. Starting from the vision API one for realtime monitoring the ripeness of certain fruits, forecasting sales based on interests for discounts on certain products, and so on.
 Let's focus on details on one specific
+
 ### Use case 1 B2C - Apply 50% sticker on specific products when certain conditions applies
 
-Data are flowing via pipeline from SAP to Confluent Kafka, analyzed from Flink with Purchase data from POS data, and Flink CEP pattern detection- Apply 50% stickers on lamb meat.
-Easter is near, and Zürich stores are filled with lamb meat, following forecasting ERP model adjusted on weather forecast.
-Weather was horrible, no grill events outside, leading to many packs on shelves.
+> Easter is near, and Zürich stores are filled with lamb meat, following forecasting ERP model adjusted on weather forecast.
+> Weather was horrible, no grill events outside, leading to many packs on shelves.
+
 Flink detects this pattern in certain stores in Zurich Area, surge of items close to expiration, and mark the product to be discounted.
 Clerks of stores in Zurich area receive the task of putting 50% stickers on meat.
 Customers got informed with a PUSH notification their favourite store is having a time limited promotion on meat (Store/Product are preference in app, leading subscription to specific topics).
