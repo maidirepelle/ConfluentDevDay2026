@@ -12,9 +12,10 @@ This application aims to **minimize food waste** in modern grocery stores using 
 
 > In Switzerland alone, **260 kg of food is thrown away every second**.  https://uglyfruits.ch/en/food-waste-facts
 
-Picture this: every 4 seconds, that’s the mass equivalent of a **Fiat New 500** going to waste.
+Picture this: every 4 seconds, the mass equivalent of a **Fiat New 500** is going to waste.
 
-This is not just a local issue. Switzerland is not even a **"blip"** on the radar of big countries. It’s a global symptom of inefficient stock management, rigid pricing strategies, and fluctuating consumer demand. In 2026, no more.
+This is not just a local issue. Switzerland is not even a **"blip"** on the radar of big countries. It’s a global symptom of inefficient stock management, rigid pricing strategies, and fluctuating consumer demand. 
+**In 2026, no more.**
 
 ### Key Challenges for Grocery Retailers
 
@@ -151,7 +152,7 @@ SELECT
   event_time
 FROM overstock_detected;
 ```
-#### B2C Push Notification (Pub/Sub 🔥)
+#### B2C Push Notification (Pub/Sub)
 ```sql
 INSERT INTO recommendation_events
 SELECT
